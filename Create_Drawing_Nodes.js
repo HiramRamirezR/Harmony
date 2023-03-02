@@ -7,7 +7,7 @@ function createDrawingNodes() {
             var posY = node.coordY(currentNode);
 
             for (var i = 0; i < 4; i++) {
-                var newNode = node.add(parentNode(currentNode), "drawing_" + (i + 1), "READ", posX + (120 * i), posY + 100, 0)
+                var newNode = node.add(node.parentNode(currentNode), "drawing_" + (i + 1), "READ", posX + (120 * i), posY + 100, 0)
                 node.link(newNode, 0, currentNode, 0)
             }
         } 
